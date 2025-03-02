@@ -62,6 +62,8 @@ return [
 
     /*
      * Authenticatable model class
+     *
+     * @deprecated
      */
     'authenticatable' => \App\Models\User::class,
 
