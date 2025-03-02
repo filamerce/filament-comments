@@ -6,6 +6,7 @@ All notable changes to `filament-comments` will be documented in this file.
 
 - Reverted: Change user relation to morph (Credit [@webard](https://github.com/webard))
 - Fixed deleting comment when ID is not int (Credit [@webard](https://github.com/webard))
+- Introduced Laravel Pint (Credit [@webard](https://github.com/webard))
 
 # 2.0.0 March 2, 2025
 
