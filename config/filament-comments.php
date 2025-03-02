@@ -15,7 +15,6 @@ return [
         'empty' => 'heroicon-s-chat-bubble-left-right',
     ],
 
-
     /*
      * The comment model to be used
      */

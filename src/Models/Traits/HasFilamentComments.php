@@ -3,7 +3,6 @@
 namespace Filamerce\FilamentComments\Models\Traits;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Filamerce\FilamentComments\Models\FilamentComment;
 
 trait HasFilamentComments
 {

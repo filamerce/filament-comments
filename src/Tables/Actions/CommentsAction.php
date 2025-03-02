@@ -2,11 +2,10 @@
 
 namespace Filamerce\FilamentComments\Tables\Actions;
 
-use Filament\Tables\Actions\Action;
 use Filament\Support\Enums\MaxWidth;
+use Filament\Tables\Actions\Action;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
-use Filamerce\FilamentComments\Models\FilamentComment;
 
 class CommentsAction extends Action
 {

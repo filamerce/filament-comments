@@ -2,6 +2,12 @@
 
 All notable changes to `filament-comments` will be documented in this file.
 
+# 2.0.1
+
+- Reverted: Change user relation to morph (Credit [@webard](https://github.com/webard))
+- Fixed deleting comment when ID is not int (Credit [@webard](https://github.com/webard))
+- Introduced Laravel Pint (Credit [@webard](https://github.com/webard))
+
 # 2.0.0 March 2, 2025
 
 - introduce an "auto_open" config parameter to automatically open the comments slide-over when at least one comment is attached to the model (Credit [@thyseus](https://github.com/shopauskunft))

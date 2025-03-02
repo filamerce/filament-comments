@@ -5,15 +5,13 @@ namespace Filamerce\FilamentComments;
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
-use Illuminate\Filesystem\Filesystem;
+use Filamerce\FilamentComments\Livewire\CommentsComponent;
+use Filamerce\FilamentComments\Policies\FilamentCommentPolicy;
 use Illuminate\Support\Facades\Gate;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Filamerce\FilamentComments\Livewire\CommentsComponent;
-use Filamerce\FilamentComments\Models\FilamentComment;
-use Filamerce\FilamentComments\Policies\FilamentCommentPolicy;
 
 class FilamentCommentsServiceProvider extends PackageServiceProvider
 {
@@ -74,7 +72,7 @@ class FilamentCommentsServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-comments-styles', __DIR__ . '/../resources/dist/filament-comments.css'),
+            Css::make('filament-comments-styles', __DIR__.'/../resources/dist/filament-comments.css'),
         ];
     }
 

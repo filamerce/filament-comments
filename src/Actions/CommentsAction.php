@@ -7,7 +7,6 @@ use Filament\Support\Enums\MaxWidth;
 use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Contracts\View\View;
-use Filamerce\FilamentComments\Models\FilamentComment;
 
 class CommentsAction extends Action
 {
@@ -25,7 +24,7 @@ class CommentsAction extends Action
         if (config('filament-comments.auto_open') && $count > 0) {
             FilamentView::registerRenderHook(
                 PanelsRenderHook::BODY_END,
-                fn (): string => <<<JS
+                fn (): string => <<<'JS'
                     <script>
                         window.addEventListener("load", (event) => {
                             document.getElementById("toggle-comments").click()
