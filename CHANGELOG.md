@@ -10,6 +10,8 @@ All notable changes to `filament-comments` will be documented in this file.
 - Add foreign key to user_id (Credit [@ziming](https://github.com/ziming))
 - Use Model set in config (Credit [@LeeJump24](https://github.com/LeeJump24))
 - Change user relation to morph (Credit [@MartinPetricko](https://github.com/MartinPetricko))
+- Add Arabic Translations (Credit [@majdghithan](https://github.com/majdghithan))
+
 
 # 1.4.0 - January 3, 2025
 
