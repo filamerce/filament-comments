@@ -11,6 +11,7 @@ All notable changes to `filament-comments` will be documented in this file.
 - Use Model set in config (Credit [@LeeJump24](https://github.com/LeeJump24))
 - Change user relation to morph (Credit [@MartinPetricko](https://github.com/MartinPetricko))
 - Add Arabic Translations (Credit [@majdghithan](https://github.com/majdghithan))
+- Update Illuminate contracts version to support 12.0 (Credit [@CodeWithDennis](https://github.com/CodeWithDennis))
 
 
 # 1.4.0 - January 3, 2025
