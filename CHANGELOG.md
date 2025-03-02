@@ -8,6 +8,7 @@ All notable changes to `filament-comments` will be documented in this file.
 - Update French Translation DeleteComment Tooltip (Credit [@agencetwogether](https://github.com/agencetwogether))
 - Fix "Call to a member function filamentComments() on null" (Credit [@teodino93](https://github.com/teodino93))
 - Add foreign key to user_id (Credit [@ziming](https://github.com/ziming))
+- Use Model set in config (Credit [@LeeJump24](https://github.com/LeeJump24))
 
 # 1.4.0 - January 3, 2025
 
