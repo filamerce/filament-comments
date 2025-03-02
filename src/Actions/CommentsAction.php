@@ -39,7 +39,7 @@ class CommentsAction extends Action
             ->hiddenLabel()
             ->icon(config('filament-comments.icons.action'))
             ->color('gray')
-            ->badge($count)
+            ->badge(fn (Model $record): int => $record->filamentComments()->count())
             ->slideOver()
             ->modalContentFooter(fn (): View => view('filament-comments::component'))
             ->modalHeading(__('filament-comments::filament-comments.modal.heading'))
