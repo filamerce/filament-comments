@@ -15,7 +15,6 @@ class FilamentComment extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'user_type',
         'user_id',
         'subject_type',
         'subject_id',
@@ -35,7 +34,9 @@ class FilamentComment extends Model
 
     public function user(): BelongsTo
     {
-        return $this->morphTo();
+        $authenticatable = config('filament-comments.authenticatable');
+
+        return $this->belongsTo($authenticatable, 'user_id');
     }
 
     public function subject(): BelongsTo

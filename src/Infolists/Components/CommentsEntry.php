@@ -3,7 +3,6 @@
 namespace Filamerce\FilamentComments\Infolists\Components;
 
 use Filament\Infolists\Components\Entry;
-use Filamerce\FilamentComments\Models\FilamentComment;
 
 class CommentsEntry extends Entry
 {
