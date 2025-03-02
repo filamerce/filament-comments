@@ -1,8 +1,8 @@
 <div class="flex flex-col h-full space-y-4">
-    @if (auth()->user()->can('create', \Parallax\FilamentComments\Models\FilamentComment::class))
+    @if (auth()->user()->can('create', \Filamerce\FilamentComments\Models\FilamentComment::class))
         <div class="space-y-4">
             {{ $this->form }}
-            
+
             <x-filament::button
                 wire:click="create"
                 color="primary"
@@ -63,7 +63,7 @@
                 icon="{{ config('filament-comments.icons.empty') }}"
                 class="h-12 w-12 text-gray-400 dark:text-gray-500"
             />
-            
+
             <div class="text-sm text-gray-400 dark:text-gray-500">
                 {{ __('filament-comments::filament-comments.comments.empty') }}
             </div>

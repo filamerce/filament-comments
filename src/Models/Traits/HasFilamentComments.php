@@ -1,9 +1,9 @@
 <?php
 
-namespace Parallax\FilamentComments\Models\Traits;
+namespace Filamerce\FilamentComments\Models\Traits;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Parallax\FilamentComments\Models\FilamentComment;
+use Filamerce\FilamentComments\Models\FilamentComment;
 
 trait HasFilamentComments
 {

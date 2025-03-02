@@ -1,13 +1,13 @@
 <?php
 
-namespace Parallax\FilamentComments\Actions;
+namespace Filamerce\FilamentComments\Actions;
 
 use Filament\Actions\Action;
 use Filament\Support\Enums\MaxWidth;
 use Filament\Support\Facades\FilamentView;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Contracts\View\View;
-use Parallax\FilamentComments\Models\FilamentComment;
+use Filamerce\FilamentComments\Models\FilamentComment;
 
 class CommentsAction extends Action
 {

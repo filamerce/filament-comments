@@ -1,20 +1,22 @@
 # Filament Comments
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/parallax/filament-comments?style=flat-square)](https://packagist.org/packages/parallax/filament-comments)
-[![Software License](https://img.shields.io/packagist/l/parallax/filament-comments?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/parallax/filament-comments?style=flat-square)](https://packagist.org/packages/parallax/filament-comments)
-![Stars](https://img.shields.io/github/stars/parallax/filament-comments?style=flat-square)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/filamerce/filament-comments?style=flat-square)](https://packagist.org/packages/filamerce/filament-comments)
+[![Software License](https://img.shields.io/packagist/l/filamerce/filament-comments?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/filamerce/filament-comments?style=flat-square)](https://packagist.org/packages/filamerce/filament-comments)
+![Stars](https://img.shields.io/github/stars/filamerce/filament-comments?style=flat-square)
 
 Add comments to your Filament Resources.
 
-<img class="filament-hidden" src="https://github.com/parallax/filament-comments/raw/main/assets/filament-comments.jpg"/>
+This package is a fork of [https://github.com/parallax/filament-comments] with merged Pull Requests and support of Laravel 12.
+
+<img class="filament-hidden" src="https://github.com/filamerce/filament-comments/raw/main/assets/filament-comments.jpg"/>
 
 ## Installation
 
 Install the package via composer:
 
 ```bash
-composer require parallax/filament-comments
+composer require filamerce/filament-comments
 ```
 
 Publish and run the migrations:
@@ -51,7 +53,7 @@ First open the eloquent model you wish to add Filament Comments to.
 ```php
 namespace App\Models;
 
-use Parallax\FilamentComments\Models\Traits\HasFilamentComments;
+use Filamerce\FilamentComments\Models\Traits\HasFilamentComments;
 
 class Product extends Model
 {
@@ -74,7 +76,7 @@ Add the `CommentsAction` to the `getHeaderActions()` method.
 
 namespace App\Filament\Resources\ProductResource\Pages;
 
-use Parallax\FilamentComments\Actions\CommentsAction;
+use Filamerce\FilamentComments\Actions\CommentsAction;
 
 class ViewProduct extends ViewRecord
 {
@@ -100,7 +102,7 @@ Add the `CommentsAction` to the `$table->actions()` method.
 
 namespace App\Filament\Resources;
 
-use Parallax\FilamentComments\Tables\Actions\CommentsAction;
+use Filamerce\FilamentComments\Tables\Actions\CommentsAction;
 
 class ProductResource extends Resource
 {
@@ -127,7 +129,7 @@ Add the `CommentsEntry` to the `$infolist->schema()` method.
 
 namespace App\Filament\Resources;
 
-use Parallax\FilamentComments\Infolists\Components\CommentsEntry;
+use Filamerce\FilamentComments\Infolists\Components\CommentsEntry;
 
 class ProductResource extends Resource
 {
@@ -147,13 +149,13 @@ Please note that this cannot be used in combination with a comments action on th
 
 By default, all users can view & create comments as well as only delete their own comments.
 
-If you would like to change this behaviour you can create your own eloquent model policy for the `Parallax\FilamentComments\Models\FilamentComment` model.
+If you would like to change this behaviour you can create your own eloquent model policy for the `Filamerce\FilamentComments\Models\FilamentComment` model.
 
 You should define the policy class in the `filament-comments` config file.
 
 ```php
 return [
-    'model_policy' => \Parallax\FilamentComments\Policies\FilamentCommentPolicy::class,
+    'model_policy' => \Filamerce\FilamentComments\Policies\FilamentCommentPolicy::class,
 ];
 ```
 
@@ -173,7 +175,7 @@ After configuring the model, you should schedule the `model:prune` Artisan comma
 namespace App\Console;
 
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use Parallax\FilamentComments\Models\FilamentComment;
+use Filamerce\FilamentComments\Models\FilamentComment;
 
 class Kernel extends ConsoleKernel
 {
@@ -196,7 +198,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 ## Credits
 
 - [Parallax](https://parall.ax)
-- [Contributors](https://github.com/parallax/filament-comments/graphs/contributors)
+- [Contributors](https://github.com/filamerce/filament-comments/graphs/contributors)
 
 ## License
 

@@ -19,12 +19,12 @@ return [
     /*
      * The comment model to be used
      */
-    'comment_model' => \Parallax\FilamentComments\Models\FilamentComment::class,
+    'comment_model' => \Filamerce\FilamentComments\Models\FilamentComment::class,
 
     /*
      * The policy that will be used to authorize actions against comments.
      */
-    'model_policy' => \Parallax\FilamentComments\Policies\FilamentCommentPolicy::class,
+    'model_policy' => \Filamerce\FilamentComments\Policies\FilamentCommentPolicy::class,
 
     /*
      * The number of days after which soft-deleted comments should be deleted.

@@ -1,9 +1,9 @@
 <?php
 
-namespace Parallax\FilamentComments\Policies;
+namespace Filamerce\FilamentComments\Policies;
 
 use Illuminate\Contracts\Auth\Authenticatable;
-use Parallax\FilamentComments\Models\FilamentComment;
+use Filamerce\FilamentComments\Models\FilamentComment;
 
 class FilamentCommentPolicy
 {

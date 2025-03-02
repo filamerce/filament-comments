@@ -1,21 +1,26 @@
 {
-    "name": "parallax/filament-comments",
+    "name": "filamerce/filament-comments",
     "description": "Add comments to your Filament Resources.",
     "keywords": [
         "parallax",
         "laravel",
         "filament-comments"
     ],
-    "homepage": "https://github.com/parallax/filament-comments",
+    "homepage": "https://github.com/filamerce/filament-comments",
     "support": {
-        "issues": "https://github.com/parallax/filament-comments/issues",
-        "source": "https://github.com/parallax/filament-comments"
+        "issues": "https://github.com/filamerce/filament-comments/issues",
+        "source": "https://github.com/filamerce/filament-comments"
     },
     "license": "MIT",
     "authors": [
         {
             "name": "Parallax",
             "email": "luke@parall.ax",
+            "role": "Developer"
+        },
+        {
+            "name": "Webard",
+            "email": "code@webard.me",
             "role": "Developer"
         }
     ],
@@ -27,13 +32,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Parallax\\FilamentComments\\": "src/"
+            "Filamerce\\FilamentComments\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Parallax\\FilamentComments\\FilamentCommentsServiceProvider"
+                "Filamerce\\FilamentComments\\FilamentCommentsServiceProvider"
             ]
         }
     },

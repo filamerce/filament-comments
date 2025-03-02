@@ -1,12 +1,12 @@
 <?php
 
-namespace Parallax\FilamentComments\Tables\Actions;
+namespace Filamerce\FilamentComments\Tables\Actions;
 
 use Filament\Tables\Actions\Action;
 use Filament\Support\Enums\MaxWidth;
 use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Model;
-use Parallax\FilamentComments\Models\FilamentComment;
+use Filamerce\FilamentComments\Models\FilamentComment;
 
 class CommentsAction extends Action
 {

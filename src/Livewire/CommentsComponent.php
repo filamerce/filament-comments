@@ -1,6 +1,6 @@
 <?php
 
-namespace Parallax\FilamentComments\Livewire;
+namespace Filamerce\FilamentComments\Livewire;
 
 use Filament\Forms;
 use Filament\Forms\Concerns\InteractsWithForms;
