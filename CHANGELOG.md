@@ -2,14 +2,11 @@
 
 All notable changes to `filament-comments` will be documented in this file.
 
-# 2.0.1
+# 2.0.1 March 2, 2025
 
 - Reverted: Change user relation to morph (Credit [@webard](https://github.com/webard))
 - Fixed deleting comment when ID is not int (Credit [@webard](https://github.com/webard))
 - Introduced Laravel Pint (Credit [@webard](https://github.com/webard))
-
-# 2.0.0 March 2, 2025
-
 - introduce an "auto_open" config parameter to automatically open the comments slide-over when at least one comment is attached to the model (Credit [@thyseus](https://github.com/shopauskunft))
 - Update French Translation DeleteComment Tooltip (Credit [@agencetwogether](https://github.com/agencetwogether))
 - Fix "Call to a member function filamentComments() on null" (Credit [@teodino93](https://github.com/teodino93))
