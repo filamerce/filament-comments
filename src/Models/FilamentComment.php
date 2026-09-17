@@ -2,12 +2,14 @@
 
 namespace Filamerce\FilamentComments\Models;
 
+use Filamerce\FilamentComments\Support\CommentSanitizer;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\MassPrunable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Support\HtmlString;
 
 class FilamentComment extends Model
 {
@@ -42,6 +44,17 @@ class FilamentComment extends Model
     public function subject(): BelongsTo
     {
         return $this->morphTo();
+    }
+
+    /**
+     * The comment body, rendered as HTML that is safe to output unescaped.
+     *
+     * The stored body is untrusted user input: markdown bodies are converted
+     * first, and the result is always run through the sanitizer.
+     */
+    public function renderedComment(): HtmlString
+    {
+        return CommentSanitizer::render($this->comment);
     }
 
     public function prunable(): Builder

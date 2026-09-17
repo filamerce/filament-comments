@@ -145,6 +145,33 @@ class ProductResource extends Resource
 
 Please note that this cannot be used in combination with a comments action on the same page.
 
+## Comment sanitization
+
+Comment bodies are written by your panel users and rendered as HTML in every
+other user's browser, so they are treated as untrusted input. Before a comment
+is rendered it is passed through an allowlist sanitizer that keeps the
+formatting the bundled editors produce (bold, italic, lists, links, quotes,
+code blocks) and drops everything else, including `<script>`, event handler
+attributes such as `onerror`, `javascript:` URLs and inline `style`
+attributes.
+
+If you need a different policy, rebind the sanitizer in a service provider:
+
+```php
+use Filamerce\FilamentComments\Support\CommentSanitizer;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
+
+$this->app->singleton(CommentSanitizer::class, fn () => new CommentSanitizer(
+    CommentSanitizer::defaultConfig()->allowAttribute('style', allowedElements: '*'),
+));
+```
+
+> [!WARNING]
+> If you published this package's views before v2.0.2, your published
+> `comments.blade.php` still renders comments unsanitized. Re-publish it, or
+> replace the comment body output with
+> `{{ \Filamerce\FilamentComments\Support\CommentSanitizer::render($comment->comment) }}`.
+
 ## Authorisation
 
 By default, all users can view & create comments as well as only delete their own comments.
