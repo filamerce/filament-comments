@@ -2,6 +2,10 @@
 
 All notable changes to `filament-comments` will be documented in this file.
 
+# 2.0.2 September 17, 2026
+
+- **Security:** Fixed a stored cross-site scripting (XSS) vulnerability where a comment body was rendered as raw HTML, letting any user who can post a comment run script in the browser of everyone who viewed that resource. Comment bodies are now sanitized through an allowlist before rendering. Reported by Thaw Khant.
+
 # 2.0.1 March 2, 2025
 
 - Reverted: Change user relation to morph (Credit [@webard](https://github.com/webard))

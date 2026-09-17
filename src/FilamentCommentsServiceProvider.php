@@ -7,6 +7,7 @@ use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Filamerce\FilamentComments\Livewire\CommentsComponent;
 use Filamerce\FilamentComments\Policies\FilamentCommentPolicy;
+use Filamerce\FilamentComments\Support\CommentSanitizer;
 use Illuminate\Support\Facades\Gate;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
@@ -47,6 +48,11 @@ class FilamentCommentsServiceProvider extends PackageServiceProvider
         if (file_exists($package->basePath('/../resources/views'))) {
             $package->hasViews(static::$viewNamespace);
         }
+    }
+
+    public function packageRegistered(): void
+    {
+        $this->app->singleton(CommentSanitizer::class);
     }
 
     public function packageBooted(): void
